@@ -1,0 +1,31 @@
+{
+  "name": "angular-openweathermap-api-factory",
+  "description": "angularjs factory for openweathermap json rest api requests",
+  "version": "0.1.0",
+  "main": "Gruntfile.js",
+  "authors": [
+    "Jonathan Hornung"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "angularjs",
+    "angular",
+    "openweathermap",
+    "api",
+    "factory"
+  ],
+  "homepage": "https://openweathermap.com/JohnnyTheTank/angular-openweathermap-api-factory",
+  "moduleType": [
+    "globals"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "*"
+  }
+}
