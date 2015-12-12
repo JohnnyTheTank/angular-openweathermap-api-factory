@@ -1,4 +1,4 @@
-**angular-openweathermap-api-factory** is an angularjs module with a openweathermap api factory.
+**angular-openweathermap-api-factory** is an angularjs module with a [OpenWeatherMap](http://openweathermap.org/) API promise factory.
 
 Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
 
