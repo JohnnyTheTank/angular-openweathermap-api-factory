@@ -1,3 +1,10 @@
+/**
+    @name: angular-openweathermap-api-factory 
+    @version: 0.5.0 (06-01-2016) 
+    @author: Jonathan Hornung 
+    @url: https://github.com/JohnnyTheTank/angular-openweathermap-api-factory#readme 
+    @license: MIT
+*/
 "use strict";
 
 angular.module("jtt_openweathermap", [])
