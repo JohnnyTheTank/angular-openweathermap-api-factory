@@ -29,9 +29,9 @@ openweathermapFactory.getWeatherFromCitySearchByName({
     units:"<UNITS>", // (optinal) http://openweathermap.org/current#data
     type:"<TYPE>", // (optional) 'like' = close result, 'accurate' = accurate result
     appid:"<APP_ID>"
-}).success(function(_data){
+}).then(function(_data){
     //on success
-}).error(function (_data) {
+}).catch(function (_data) {
     //on error
 });
 ```
@@ -44,9 +44,9 @@ openweathermapFactory.getWeatherFromCityById({
     lang:"<LANGUAGE>", // (optional) http://openweathermap.org/current#multi
     units:"<UNITS>", // (optinal) http://openweathermap.org/current#data
     appid:"<APP_ID>"
-}).success(function(_data){
+}).then(function(_data){
     //on success
-}).error(function (_data) {
+}).catch(function (_data) {
     //on error
 });
 ```
@@ -59,9 +59,9 @@ openweathermapFactory.getWeatherFromGroupOfCitiesById({
     lang:"<LANGUAGE>", // (optional) http://openweathermap.org/current#multi
     units:"<UNITS>", // (optinal) http://openweathermap.org/current#data
     appid:"<APP_ID>"
-}).success(function(_data){
+}).then(function(_data){
     //on success
-}).error(function (_data) {
+}).catch(function (_data) {
     //on error
 });
 ```
@@ -75,9 +75,9 @@ openweathermapFactory.getWeatherFromLocationByCoordinates({
     lang:"<LANGUAGE>", // (optional) http://openweathermap.org/current#multi
     units:"<UNITS>", // (optinal) http://openweathermap.org/current#data
     appid:"<APP_ID>"
-}).success(function(_data){
+}).then(function(_data){
     //on success
-}).error(function (_data) {
+}).catch(function (_data) {
     //on error
 });
 ```
@@ -90,9 +90,9 @@ openweathermapFactory.getWeatherFromLocationByCoordinates({
     lang:"<LANGUAGE>", // http://openweathermap.org/current#multi
     units:"<UNITS>", // (optinal) http://openweathermap.org/current#data
     appid:"<APP_ID>"
-}).success(function(_data){
+}).then(function(_data){
     //on success
-}).error(function (_data) {
+}).catch(function (_data) {
     //on error
 });
 ```
