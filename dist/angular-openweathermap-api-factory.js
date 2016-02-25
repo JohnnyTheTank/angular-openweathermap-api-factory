@@ -1,6 +1,6 @@
 /**
     @name: angular-openweathermap-api-factory 
-    @version: 0.5.0 (06-01-2016) 
+    @version: 0.5.0 (25-02-2016) 
     @author: Jonathan Hornung 
     @url: https://github.com/JohnnyTheTank/angular-openweathermap-api-factory#readme 
     @license: MIT
@@ -66,7 +66,7 @@ angular.module("jtt_openweathermap", [])
 
         this.fillDataInObjectByList = function (_object, _params, _list) {
             angular.forEach(_list, function (value, key) {
-                if (typeof _params[value] !== "undefined") {
+                if (angular.isDefined(_params[value])) {
                     _object.object[value] = _params[value];
                 }
             });

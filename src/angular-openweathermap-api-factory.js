@@ -59,7 +59,7 @@ angular.module("jtt_openweathermap", [])
 
         this.fillDataInObjectByList = function (_object, _params, _list) {
             angular.forEach(_list, function (value, key) {
-                if (typeof _params[value] !== "undefined") {
+                if (angular.isDefined(_params[value])) {
                     _object.object[value] = _params[value];
                 }
             });
