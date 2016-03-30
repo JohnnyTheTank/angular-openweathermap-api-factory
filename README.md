@@ -1,7 +1,7 @@
 **angular-openweathermap-api-factory** is an angularjs module with a [OpenWeatherMap](http://openweathermap.org/) API promise factory.
 
-[![npm version](https://badge.fury.io/js/angular-openweathermap-api-factory.png)](https://badge.fury.io/js/angular-openweathermap-api-factory)
-[![Bower version](https://badge.fury.io/bo/angular-openweathermap-api-factory.png)](https://badge.fury.io/bo/angular-openweathermap-api-factory)
+[![npm version](https://badge.fury.io/js/angular-openweathermap-api-factory.svg)](https://badge.fury.io/js/angular-openweathermap-api-factory)
+[![Bower version](https://badge.fury.io/bo/angular-openweathermap-api-factory.svg)](https://badge.fury.io/bo/angular-openweathermap-api-factory)
 
 Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
 
