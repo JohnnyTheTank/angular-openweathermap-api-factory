@@ -11,8 +11,7 @@ Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
     1. `bower install --save angular-openweathermap-api-factory`
     2. `npm install --save angular-openweathermap-api-factory`
     3. download [angular-openweathermap-api-factory.zip](https://github.com/JohnnyTheTank/angular-openweathermap-api-factory/zipball/master)
-2. Add **`jtt_openweathermap`** to your application's module dependencies.
-3. Include dependencies in your HTML.
+2. Include dependencies in your HTML.
     1. When using bower:
     ```html
     <script src="bower_components/angular-openweathermap-api-factory/dist/angular-openweathermap-api-factory.min.js"></script>
@@ -24,7 +23,8 @@ Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
     3. when using downloaded files
     ```html
     <script src="angular-openweathermap-api-factory.min.js"></script>
-    ```
+    ```  
+3. Add **`jtt_openweathermap`** to your application's module dependencies.
 4. Use the factory `openweathermapFactory`
 
 
