@@ -11,7 +11,7 @@ Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
     1. `bower install --save angular-openweathermap-api-factory`
     2. `npm install --save angular-openweathermap-api-factory`
     3. download [angular-openweathermap-api-factory.zip](https://github.com/JohnnyTheTank/angular-openweathermap-api-factory/zipball/master)
-2. Add `jtt_openweathermap` to your application's module dependencies.
+2. Add **`jtt_openweathermap`** to your application's module dependencies.
 3. Include dependencies in your HTML.
     1. When using bower:
     ```html
@@ -28,11 +28,11 @@ Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
 4. Use the factory `openweathermapFactory`
 
 
-### factory methods
+## factory methods
 
-#### current weather
+### current weather
 
-##### current weather from city by name
+#### current weather from city by name
 ```js
 // docs: http://openweathermap.org/current#name
 openweathermapFactory.getWeatherFromCitySearchByName({
@@ -48,7 +48,7 @@ openweathermapFactory.getWeatherFromCitySearchByName({
 });
 ```
 
-##### current weather from city by id
+#### current weather from city by id
 ```js
 // docs: http://openweathermap.org/current#cityid
 openweathermapFactory.getWeatherFromCityById({
@@ -63,7 +63,7 @@ openweathermapFactory.getWeatherFromCityById({
 });
 ```
 
-##### current weather from group of cities by id
+#### current weather from group of cities by id
 ```js
 // docs: http://openweathermap.org/current#severalid
 openweathermapFactory.getWeatherFromGroupOfCitiesById({
@@ -78,7 +78,7 @@ openweathermapFactory.getWeatherFromGroupOfCitiesById({
 });
 ```
 
-##### current weather from location by coordinates
+#### current weather from location by coordinates
 ```js
 // docs: http://openweathermap.org/current#geo
 openweathermapFactory.getWeatherFromLocationByCoordinates({
@@ -94,7 +94,7 @@ openweathermapFactory.getWeatherFromLocationByCoordinates({
 });
 ```
 
-##### current weather from location by zipcode
+#### current weather from location by zipcode
 ```js
 // docs: http://openweathermap.org/current#zip
 openweathermapFactory.getWeatherFromLocationByCoordinates({
@@ -109,9 +109,9 @@ openweathermapFactory.getWeatherFromLocationByCoordinates({
 });
 ```
 
-#### 5-day-forecast
+### 5-day-forecast
 
-##### 5-day-forecast from city by name
+#### 5-day-forecast from city by name
 ```js
 // docs: http://openweathermap.org/forecast5#name5
 openweathermapFactory.cityForecast5SearchByName({
@@ -127,7 +127,7 @@ openweathermapFactory.cityForecast5SearchByName({
 });
 ```
 
-##### 5-day-forecast from city by id
+#### 5-day-forecast from city by id
 ```js
 // docs: http://openweathermap.org/forecast5#cityid5
 openweathermapFactory.getForecast5FromCityById({
