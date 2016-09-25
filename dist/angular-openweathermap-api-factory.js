@@ -1,6 +1,6 @@
 /**
     @name: angular-openweathermap-api-factory 
-    @version: 0.5.0 (25-09-2016) 
+    @version: 0.6.0 (25-09-2016) 
     @author: Jonathan Hornung 
     @url: https://github.com/JohnnyTheTank/angular-openweathermap-api-factory#readme 
     @license: MIT
@@ -165,7 +165,6 @@ angular.module("jtt_openweathermap", [])
                     ]);
                     openweathermapSearchData.url = this.getApiBaseUrl() + "forecast";
                     break;
-
             }
             return openweathermapSearchData;
         };
