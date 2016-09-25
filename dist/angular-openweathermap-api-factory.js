@@ -1,6 +1,6 @@
 /**
     @name: angular-openweathermap-api-factory 
-    @version: 0.5.0 (25-02-2016) 
+    @version: 0.6.0 (25-09-2016) 
     @author: Jonathan Hornung 
     @url: https://github.com/JohnnyTheTank/angular-openweathermap-api-factory#readme 
     @license: MIT
@@ -50,6 +50,33 @@ angular.module("jtt_openweathermap", [])
 
         openweathermapFactory.getWeatherFromLocationByZipcode = function (_params) {
             var searchData = openweathermapSearchDataService.getNew("locationByZipcode", _params);
+            return $http({
+                method: 'GET',
+                url: searchData.url,
+                params: searchData.object,
+            });
+        };
+
+        openweathermapFactory.getForecast5FromCitySearchByName = function (_params) {
+            var searchData = openweathermapSearchDataService.getNew("cityForecast5SearchByName", _params);
+            return $http({
+                method: 'GET',
+                url: searchData.url,
+                params: searchData.object,
+            });
+        };
+
+        openweathermapFactory.getForecast5FromCityById = function (_params) {
+            var searchData = openweathermapSearchDataService.getNew("cityForecast5ById", _params);
+            return $http({
+                method: 'GET',
+                url: searchData.url,
+                params: searchData.object,
+            });
+        };
+
+        openweathermapFactory.getForecast5FromLocationByCoordinates = function (_params) {
+            var searchData = openweathermapSearchDataService.getNew("locationForecast5ByCoordinates", _params);
             return $http({
                 method: 'GET',
                 url: searchData.url,
@@ -116,6 +143,27 @@ angular.module("jtt_openweathermap", [])
                         'zip', 'lang', "units",
                     ]);
                     openweathermapSearchData.url = this.getApiBaseUrl() + "weather";
+                    break;
+
+                case "cityForecast5SearchByName":
+                    openweathermapSearchData = this.fillDataInObjectByList(openweathermapSearchData, _params, [
+                        'q', 'lang', 'type', "units",
+                    ]);
+                    openweathermapSearchData.url = this.getApiBaseUrl() + "forecast";
+                    break;
+
+                case "cityForecast5ById":
+                    openweathermapSearchData = this.fillDataInObjectByList(openweathermapSearchData, _params, [
+                        'id', 'lang', "units",
+                    ]);
+                    openweathermapSearchData.url = this.getApiBaseUrl() + "forecast";
+                    break;
+
+                case "locationForecast5ByCoordinates":
+                    openweathermapSearchData = this.fillDataInObjectByList(openweathermapSearchData, _params, [
+                        'lat', 'lon', 'lang', "units",
+                    ]);
+                    openweathermapSearchData.url = this.getApiBaseUrl() + "forecast";
                     break;
             }
             return openweathermapSearchData;

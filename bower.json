@@ -1,7 +1,7 @@
 {
   "name": "angular-openweathermap-api-factory",
   "description": "angularjs factory for openweathermap json rest api requests",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "main": "dist/angular-openweathermap-api-factory.js",
   "authors": [
     "Jonathan Hornung"

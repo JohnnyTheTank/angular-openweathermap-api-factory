@@ -11,7 +11,7 @@ Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
     1. `bower install --save angular-openweathermap-api-factory`
     2. `npm install --save angular-openweathermap-api-factory`
     3. download [angular-openweathermap-api-factory.zip](https://github.com/JohnnyTheTank/angular-openweathermap-api-factory/zipball/master)
-2. Add `jtt_openweathermap` to your application's module dependencies.
+2. Add **`jtt_openweathermap`** to your application's module dependencies.
 3. Include dependencies in your HTML.
     1. When using bower:
     ```html
@@ -28,9 +28,11 @@ Author: Jonathan Hornung ([JohnnyTheTank](https://github.com/JohnnyTheTank))
 4. Use the factory `openweathermapFactory`
 
 
-### factory methods
+## factory methods
 
-#### weather from city by name
+### current weather
+
+#### current weather from city by name
 ```js
 // docs: http://openweathermap.org/current#name
 openweathermapFactory.getWeatherFromCitySearchByName({
@@ -46,7 +48,7 @@ openweathermapFactory.getWeatherFromCitySearchByName({
 });
 ```
 
-#### weather from city by id
+#### current weather from city by id
 ```js
 // docs: http://openweathermap.org/current#cityid
 openweathermapFactory.getWeatherFromCityById({
@@ -61,7 +63,7 @@ openweathermapFactory.getWeatherFromCityById({
 });
 ```
 
-#### weather from group of cities by id
+#### current weather from group of cities by id
 ```js
 // docs: http://openweathermap.org/current#severalid
 openweathermapFactory.getWeatherFromGroupOfCitiesById({
@@ -76,7 +78,7 @@ openweathermapFactory.getWeatherFromGroupOfCitiesById({
 });
 ```
 
-#### weather from location by coordinates
+#### current weather from location by coordinates
 ```js
 // docs: http://openweathermap.org/current#geo
 openweathermapFactory.getWeatherFromLocationByCoordinates({
@@ -92,7 +94,7 @@ openweathermapFactory.getWeatherFromLocationByCoordinates({
 });
 ```
 
-#### weather from location by zipcode
+#### current weather from location by zipcode
 ```js
 // docs: http://openweathermap.org/current#zip
 openweathermapFactory.getWeatherFromLocationByCoordinates({
@@ -106,6 +108,56 @@ openweathermapFactory.getWeatherFromLocationByCoordinates({
     //on error
 });
 ```
+
+### 5-day-forecast
+
+#### 5-day-forecast from city by name
+```js
+// docs: http://openweathermap.org/forecast5#name5
+openweathermapFactory.cityForecast5SearchByName({
+    q:"<CITY_NAME>,<COUNTRY_CODE>", //city name and country code divided by comma, use ISO 3166 country codes eg "London,uk"
+    lang:"<LANGUAGE>", // (optional) http://openweathermap.org/current#multi
+    units:"<UNITS>", // (optinal) http://openweathermap.org/current#data
+    type:"<TYPE>", // (optional) 'like' = close result, 'accurate' = accurate result
+    appid:"<APP_ID>"
+}).then(function(_data){
+    //on success
+}).catch(function (_data) {
+    //on error
+});
+```
+
+#### 5-day-forecast from city by id
+```js
+// docs: http://openweathermap.org/forecast5#cityid5
+openweathermapFactory.getForecast5FromCityById({
+    id:"<CITY_ID>", //List of city ID can be downloaded here http://bulk.openweathermap.org/sample/city.list.json.gz
+    lang:"<LANGUAGE>", // (optional) http://openweathermap.org/current#multi
+    units:"<UNITS>", // (optinal) http://openweathermap.org/current#data
+    appid:"<APP_ID>"
+}).then(function(_data){
+    //on success
+}).catch(function (_data) {
+    //on error
+});
+```
+
+#### 5-day-forecast from location by coordinates
+```js
+// docs: http://openweathermap.org/forecast5#geo5
+openweathermapFactory.getForecast5FromLocationByCoordinates({
+    lat:"<LAT>",
+    lon:"<LONG>",
+    lang:"<LANGUAGE>", // (optional) http://openweathermap.org/current#multi
+    units:"<UNITS>", // (optinal) http://openweathermap.org/current#data
+    appid:"<APP_ID>"
+}).then(function(_data){
+    //on success
+}).catch(function (_data) {
+    //on error
+});
+```
+
 
 ## OpenWeatherMap JSON API
 * docs: http://openweathermap.org/api

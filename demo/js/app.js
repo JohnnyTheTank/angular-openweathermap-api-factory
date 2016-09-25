@@ -39,4 +39,26 @@ app.controller('controller', ['$scope', 'openweathermapFactory', function($scope
         console.info("weather from location by zipcode", _data);
     });
 
+    openweathermapFactory.getForecast5FromCitySearchByName({
+        q:"munich",
+        appid:_appid
+    }).then(function(_data){
+        console.info("5 day forecast from city by name", _data);
+    });
+
+    openweathermapFactory.getForecast5FromCityById({
+        id:"3220838",
+        appid:_appid
+    }).then(function(_data){
+        console.info("5 day forecast from city by id", _data);
+    });
+
+    openweathermapFactory.getForecast5FromLocationByCoordinates({
+        lat:"48.1",
+        lon:"11.63",
+        appid:_appid
+    }).then(function(_data){
+        console.info("5 day forecast from location by coordinates", _data);
+    });
+
 }]);
