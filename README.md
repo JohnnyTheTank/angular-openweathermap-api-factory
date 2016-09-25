@@ -61,6 +61,7 @@ openweathermapFactory.getWeatherFromCityById({
 });
 ```
 
+
 #### weather from group of cities by id
 ```js
 // docs: http://openweathermap.org/current#severalid
